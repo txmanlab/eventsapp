@@ -105,3 +105,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ignore Terraform files
+.terraform
+.terraform*
+terraform.tfstate
+terraform.tfstate*
