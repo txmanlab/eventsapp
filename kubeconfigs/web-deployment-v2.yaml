@@ -1,22 +1,22 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: events-web
+  name: events-web-v2
 spec: 
   selector:
     matchLabels:
       app: events-web
-      ver: v1.0
-  replicas: 2 # tells deployment to run 1 pod matching the template
+      ver: v2.0
+  replicas: 1 # tells deployment to run 1 pod matching the template
   template:
     metadata:
       labels:
         app: events-web
-        ver: v1.0
+        ver: v2.0
     spec:
       containers:
       - name: events-web
-        image: txmanlab/events-website:v1.0
+        image: txmanlab/events-website:v3.0
         env: 
         - name: SERVER
           value: "http://events-api-service:8082"
